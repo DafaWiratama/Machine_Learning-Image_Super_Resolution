@@ -11,6 +11,6 @@ def load_image_from_path(path):
 
 
 def encode_png(img):
-    return tf.image.encode_png(img, compression=1).numpy()
+    return tf.image.encode_png(img, compression=4).numpy()
 
 

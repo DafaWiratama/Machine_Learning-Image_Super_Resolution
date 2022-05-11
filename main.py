@@ -1,11 +1,12 @@
 from res import models, io
 from flask import Flask, request,  Response
+from flask_cors import CORS
 from waitress import serve
 
 model = models.ESRGAN("models/esrgan.tf")
 
 app = Flask(__name__)
-
+cors = CORS(app)
 
 @app.route('/', methods=['GET', 'POST'])
 def upscaler():
